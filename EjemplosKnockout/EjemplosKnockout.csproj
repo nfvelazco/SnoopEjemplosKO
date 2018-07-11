@@ -106,6 +106,7 @@
     <Content Include="Scripts\ClientApp\DTO\ListasDTO.js" />
     <Content Include="Scripts\ClientApp\Factory\ListasFactory.js" />
     <Content Include="Scripts\ClientApp\ViewModel\ListasModel.js" />
+    <Content Include="Scripts\ClientApp\ViewModel\SelectsModel.js" />
     <Content Include="Scripts\ClientApp\ViewModel\ValidacionesModel.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
@@ -160,6 +161,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ListasController.cs" />
+    <Compile Include="Controllers\SelectsController.cs" />
     <Compile Include="Controllers\ValidacionesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -174,6 +176,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Views\Selects\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

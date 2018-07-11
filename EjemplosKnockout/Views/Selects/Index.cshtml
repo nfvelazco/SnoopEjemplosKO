@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Manejo de selects";
+}
+
+@section scripts {
+<script src="~/Scripts/ClientApp/DTO/ListasDTO.js"></script>
+    
+<script src="~/Scripts/ClientApp/Factory/ListasFactory.js"></script>
+<script src="~/Scripts/ClientApp/ViewModel/SelectsModel.js"></script>
+}
+
+
+<h2>Manejo de Selects</h2>
+<hr />
+
+<select class="form-control"
+        data-bind="options: lFilms,
+                       optionsText: 'Title',
+                       value: selectedFilm,
+                       optionsCaption: 'Choose...'"
+        ></select>
+
+<hr />
+
+
+
+<div class="row">
+    <div class="offset-4 col-3" data-bind="with: selectedFilm ">
+        <div class="card">
+            <img class="card-img-top" data-bind="attr:{src: Poster()}" alt="Ni Image." />
+
+            <div class="card-body">
+                <h5 class="card-title" data-bind="html: Title()"></h5>
+                <p class="card-text" data-bind="html: Year()"></p>
+                @*<a href="#" class="btn btn-primary">Go somewhere</a>*@
+            </div>
+        </div>
+    </div>
+</div>
