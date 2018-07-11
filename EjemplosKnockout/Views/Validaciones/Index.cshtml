@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@section scripts {
+    
+<script src="~/Scripts/ClientApp/ViewModel/ValidacionesModel.js"></script>
+    }
+
+<h2>Validaciones</h2>
+
+<hr />
+
+<div class="row">
+    <div class="col-12">
+        <label>POR COMPUTED - SI ESCRIBE UN NUMERO ROMPERA LA VALIDACION (PARA REALIZAR LA COMPROVACION SAQUE EL FOCO DEL CAMPO O PRECIONE ENTER)</label>
+        <input type="text" data-bind="css: validaTexto,value: texto" class="form-control"/>
+    </div>
+</div>
+

@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Manejo de Listas";
+}
+
+@section scripts {
+<script src="~/Scripts/ClientApp/DTO/ListasDTO.js"></script>
+<script src="~/Scripts/ClientApp/Factory/ListasFactory.js"></script>
+<script src="~/Scripts/ClientApp/ViewModel/ListasModel.js"></script>
+}
+
+<h2>MANEJO DE LISTAS</h2>
+<hr />
+
+<div class="row">
+    <div class="col-12">
+        <button class="btn btn-info pull-left" data-bind="click: btnListaTable" style="margin-right:15px;">Lista con <b>Table</b></button>
+        <button class="btn btn-info pull-left" data-bind="click: btnListaSinTable">Lista con <b>Divs</b></button>
+    </div>
+</div>
+
+<hr />
+
+<div data-bind="visible: isTable" class="row">
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Poster</th>
+                    <th>Title</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: {data:lFilms, as: 'oFilm'}">
+                <tr>
+                    <td>
+                        <img data-bind="attr:{src: oFilm.Poster()}" width="50%" height="50%" />
+                    </td>
+                    <td data-bind="html: oFilm.Title()"></td>
+                    <td data-bind="html: oFilm.Year()"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row row-eq-height" data-bind="visible: (!isTable())">
+    <!--ko foreach: {data: lFilms, as: 'oFilm'}-->
+    <div class="col-3">
+
+        <div class="card" >
+            <img class="card-img-top" data-bind="attr:{src: oFilm.Poster()}" alt="Ni Image." />
+            
+            <div class="card-body">
+                <h5 class="card-title" data-bind="html: oFilm.Title()"></h5>
+                <p class="card-text" data-bind="html: oFilm.Year()"></p>
+                @*<a href="#" class="btn btn-primary">Go somewhere</a>*@
+            </div>
+        </div>
+
+    </div>
+    <!-- /ko-->
+</div>
