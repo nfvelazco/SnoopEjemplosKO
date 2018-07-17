@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Enable/Disable en Tabla";
+}
+
+@section scripts {
+    <script src="~/Scripts/ClientApp/DTO/ListasDTO.js"></script>
+    <script src="~/Scripts/ClientApp/Factory/ListasFactory.js"></script>
+    <script src="~/Scripts/ClientApp/ViewModel/EnableBindingModel.js"></script>
+    
+}
+
+
+
+<h2>Enable/Disable en Tabla</h2>
+
+
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Descripcion</th>
+            <th>abilitar/Desabilitar</th>
+        </tr>
+    </thead>
+
+    <tbody data-bind="foreach: {data:lFilms, as: 'oFilm'}">
+        <tr>
+            <td>
+                <img data-bind="attr:{src: oFilm.Poster()}" width="50%" height="50%" />
+            </td>
+            <td>
+                <textarea class="form-control" data-bind="enable: oFilm.enabled, value: oFilm.Title">
+</textarea>
+            </td>
+            <td>
+                <input type="checkbox" data-bind="checked: oFilm.enabled" />
+
+            </td>
+        </tr>
+    </tbody>
+
+</table>

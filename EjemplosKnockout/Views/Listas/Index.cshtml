@@ -4,9 +4,21 @@
 }
 
 @section scripts {
-<script src="~/Scripts/ClientApp/DTO/ListasDTO.js"></script>
-<script src="~/Scripts/ClientApp/Factory/ListasFactory.js"></script>
-<script src="~/Scripts/ClientApp/ViewModel/ListasModel.js"></script>
+    <script src="~/Scripts/ClientApp/DTO/ListasDTO.js"></script>
+    <script src="~/Scripts/ClientApp/Factory/ListasFactory.js"></script>
+    <script src="~/Scripts/ClientApp/ViewModel/ListasModel.js"></script>
+    <script>
+        $(function () {
+
+            //var client = new XMLHttpRequest();
+            //client.open('GET', '/Scripts/ClientApp/DTO/ListasDTO.js');
+            //client.onreadystatechange = function () {
+            //    alert(client.responseText)
+            //    $('#prueba').html(Prism.highlight(client.responseText), Prism.languages.js);
+            //}
+            //client.send();
+        });
+    </script>
 }
 
 <h2>MANEJO DE LISTAS</h2>
@@ -48,16 +60,58 @@
     <!--ko foreach: {data: lFilms, as: 'oFilm'}-->
     <div class="col-3">
 
-        <div class="card" >
+        <div class="card">
             <img class="card-img-top" data-bind="attr:{src: oFilm.Poster()}" alt="Ni Image." />
-            
+
             <div class="card-body">
                 <h5 class="card-title" data-bind="html: oFilm.Title()"></h5>
                 <p class="card-text" data-bind="html: oFilm.Year()"></p>
-                @*<a href="#" class="btn btn-primary">Go somewhere</a>*@
             </div>
         </div>
 
     </div>
     <!-- /ko-->
 </div>
+
+<hr />
+<h3>Html Con Table</h3>
+<br />
+<pre  >
+    
+<code id="prueba"  class="language-js">
+
+</code>
+</pre>
+
+
+<hr />
+
+<h3>Html Con Table</h3>
+<br />
+
+<pre class="language-markup">
+<code>
+    &lt;div data-bind="visible: isTable" class="row"&gt;
+        &lt;div class="col-12"&gt;
+            &lt;table class="table table-bordered"&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Poster&lt;/th&gt;
+                        &lt;th&gt;Title&lt;/th&gt;
+                        &lt;th&gt;Year&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody data-bind="foreach: {data:lFilms, as: 'oFilm'}"&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;
+                            &lt;img data-bind="attr:{src: oFilm.Poster()}" width="50%" height="50%" /&gt;
+                        &lt;/td&gt;
+                        &lt;td data-bind="html: oFilm.Title()"&gt;&lt;/td&gt;
+                        &lt;td data-bind="html: oFilm.Year()"&gt;&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+       &lt;/div&gt;
+    &lt;/div&gt;
+    </code>
+</pre>

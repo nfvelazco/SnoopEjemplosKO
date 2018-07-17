@@ -6,7 +6,7 @@
     <title>@ViewBag.Title</title>
   
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
+    <link href="~/Content/prism.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -28,6 +28,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/Selects">Manejo de Selects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/EnableBinding">Enable/Disable en Tabla</a>
                 </li>
                 @*<li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
@@ -52,7 +55,7 @@
 
    
 
-    <div class="container body-content">
+    <div class="container body-content" style="margin-top: 15px;">
         @RenderBody()
         <hr />
         <footer>
@@ -63,6 +66,8 @@
     <script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/knockout-3.4.2.js"></script>
-    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/prism.js"></script>
+        @RenderSection("scripts", required: false)
+        
 </body>
 </html>

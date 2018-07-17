@@ -97,6 +97,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\prism.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -105,6 +106,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\ClientApp\DTO\ListasDTO.js" />
     <Content Include="Scripts\ClientApp\Factory\ListasFactory.js" />
+    <Content Include="Scripts\ClientApp\ViewModel\EnableBindingModel.js" />
     <Content Include="Scripts\ClientApp\ViewModel\ListasModel.js" />
     <Content Include="Scripts\ClientApp\ViewModel\SelectsModel.js" />
     <Content Include="Scripts\ClientApp\ViewModel\ValidacionesModel.js" />
@@ -140,6 +142,7 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\prism.js" />
     <Content Include="Scripts\umd\popper-utils.js" />
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
@@ -159,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EnableBindingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ListasController.cs" />
     <Compile Include="Controllers\SelectsController.cs" />
@@ -177,6 +181,7 @@
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <Content Include="Views\Selects\Index.cshtml" />
+    <Content Include="Views\EnableBinding\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

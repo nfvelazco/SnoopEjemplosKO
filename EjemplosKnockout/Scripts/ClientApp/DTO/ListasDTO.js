@@ -16,6 +16,7 @@ function Film(pObj) {
     self.Type = ko.observable(iObj.Type);
     self.Year = ko.observable(iObj.Year);
     self.imdbID = ko.observable(iObj.imdbID);
+    self.enabled = ko.observable(true);
 }
 
 /*
